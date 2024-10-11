@@ -66,3 +66,7 @@ pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
 ![Screenshot 2024-10-11 095726](https://github.com/user-attachments/assets/72e33776-0cba-46f4-9a7a-f2b00e45ddc6)
 ![Screenshot 2024-10-11 095531](https://github.com/user-attachments/assets/9f7f67d3-1ab8-4bf8-b3df-3ca09e3f3a15)
 
+## Задача 6
+
+![Screenshot 2024-10-11 095922](https://github.com/user-attachments/assets/993ddd4b-ac81-42d6-87f2-89279efe347c)
+![Screenshot 2024-10-11 095555](https://github.com/user-attachments/assets/019d4951-3b13-424d-aacc-4114a379ef31)
