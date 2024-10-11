@@ -48,7 +48,8 @@ git clone https://github.com/expressjs/express.git
 cd express
 ```
 ## Задача 3
-Сформировать graphviz-код и получить изображения зависимостей matplotlib и express.
+Сформировать graphviz-код
+ и получить изображения зависимостей matplotlib и express.
 ```bash
 pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
 ```
@@ -59,3 +60,9 @@ pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
 
 
 ![Screenshot 2024-10-11 092046](https://github.com/user-attachments/assets/0972ecdc-be19-42a3-a3e2-8195b2feb7f8)
+
+## Задача 5
+
+![Screenshot 2024-10-11 095726](https://github.com/user-attachments/assets/72e33776-0cba-46f4-9a7a-f2b00e45ddc6)
+![Screenshot 2024-10-11 095531](https://github.com/user-attachments/assets/9f7f67d3-1ab8-4bf8-b3df-3ca09e3f3a15)
+
