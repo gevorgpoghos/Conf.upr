@@ -136,3 +136,45 @@ cd server
 git log -n 5 --graph --decorate --all
 ```
 
+## Задача 4
+
+![Screenshot 2024-11-08 102121](https://github.com/user-attachments/assets/b430507e-a8f0-4a5c-b42f-4fc80ca57520)
+
+```
+import os
+import subprocess
+
+def get_git_objects():
+    try:
+        result = subprocess.run(
+            ['git', 'rev-list', '--all'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        objects = result.stdout.splitlines()
+
+        for obj in objects:
+            print(f"Git Commit: {obj}")
+            try:
+                content = subprocess.run(
+                    ['git', 'cat-file', '-p', obj],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    check=True
+                )
+                print(content.stdout)
+            except subprocess.CalledProcessError as e:
+                print(f"Error {obj}: {e.stderr}")
+
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e.stderr}")
+
+if __name__ == "__main__":
+    if not os.path.exists('.git'):
+        print("Git not found")
+    else:
+        get_git_objects()
+```
