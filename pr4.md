@@ -64,3 +64,75 @@ $ git commit -m "Добавление файла"
  create mode 100644 prog.py
 
 ```
+
+## Задача 3
+![Screenshot 2024-11-08 093305](https://github.com/user-attachments/assets/1deb9376-7697-4395-8c6a-a27a69122351)
+
+```
+git init
+git config user.name "gevorgpoghos"
+git config user.email "armgamonl@gmail.com"
+echo 'print("Hello, World!")' > prog.py
+git add prog.py
+git commit -m "first commit"
+
+# Создание bare-репозитория
+mkdir -p repository
+cd repository
+git init --bare server
+
+# Возвращение в основной репозиторий, подключение к серверу и пуш
+cd ..
+git remote add server repository/server
+git remote -v
+git push server master
+
+# Клонирование серверного репозитория в клиентский
+git clone repository/server repository/client
+cd repository/client
+git config user.name "gevorgpoghos2"
+git config user.email "armgamonll@gmail.com"
+
+# Добавление нового файла и коммит
+echo "Author Information:" > readme.md
+git add readme.md
+git commit -m "docs"
+
+# Переименование удаленного репозитория и пуш
+git remote rename origin server
+git push server master
+
+# Возвращение в основной репозиторий, чтобы сделать pull
+cd ..
+git pull server master --no-rebase  # Используем merge вместо rebase
+
+# Внесение изменений от gevorgpoghos и пуш
+echo "Author: gevorgpoghos" >> readme.md
+git add readme.md
+git commit -m "gevorgpoghos info"
+git push server master
+
+# Переход в клиентский репозиторий и внесение изменений от gevorgpoghos2
+cd client
+echo "Author: gevorgpoghos2" >> readme.md
+git add readme.md
+git commit -m "gevorgpoghos2 info"
+
+# Перед `push` выполняем `pull` с merge, чтобы избежать линейной истории
+git pull server master --no-rebase
+git push server master
+
+# Получение последних изменений с сервера
+git pull server master --no-rebase
+
+# Последний коммит и пуш исправлений в readme
+git add readme.md
+git commit -m "readme fix"
+git push server master
+
+# Переход к bare-репозиторию и просмотр истории
+cd ..
+cd server
+git log -n 5 --graph --decorate --all
+```
+
