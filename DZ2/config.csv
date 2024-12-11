@@ -1,0 +1,2 @@
+visualization_tool_path,package_name,output_file,max_depth,repo_url
+/path/to/dot,curl,/home/gev/Рабочий стол/DZ2/output.dot,3,http://example.com/repo
