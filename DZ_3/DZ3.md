@@ -27,3 +27,13 @@ set имя = значение;
 Все конструкции учебного конфигурационного языка (с учетом их
 возможной вложенности) должны быть покрыты тестами. Необходимо показать 3
 примера описания конфигураций из разных предметных областей.
+
+## Запуск
+![Снимок экрана от 2024-12-13 10-02-41](https://github.com/user-attachments/assets/c74ccc49-032d-4e31-8950-224ff0d9c9f1)
+
+## Вывод
+
+![Снимок экрана от 2024-12-13 10-03-46](https://github.com/user-attachments/assets/4c0078c3-a885-4e94-bcbe-9a8ca8c3b59f)
+![Снимок экрана от 2024-12-13 10-04-27](https://github.com/user-attachments/assets/f808ed89-ed7d-40f8-9082-af28591064ac)
+![Снимок экрана от 2024-12-13 10-04-54](https://github.com/user-attachments/assets/e91ffb5a-c71f-4710-a8e9-f167c8c5bef1)
+![Снимок экрана от 2024-12-13 10-05-25](https://github.com/user-attachments/assets/c62d472b-e9cc-4ccc-acaf-1be36a95259f)
